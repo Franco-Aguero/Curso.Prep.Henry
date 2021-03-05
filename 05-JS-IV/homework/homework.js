@@ -34,6 +34,8 @@ function eliminarPropiedad(objeto, propiedad) {
   // Elimina la propiedad "propiedad" de "objeto"
   // Devuelve el objeto
   // Tu código:
+  delete objeto.propiedad
+  return objeto
 }
 
 function nuevoUsuario(nombre, email, password) {
@@ -83,6 +85,11 @@ function pasarUsuarioAPremium(usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
+  // usuarios[usuario{esPremium: }, usuario{esPrimum: }, ....]
+  for ( i = 0; i < usuarios.length; i++){
+    usuarios[i].esPremium = true;
+  } 
+  return usuarios
 }
 
 function sumarLikesDeUsuario(usuario) {
